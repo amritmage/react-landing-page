@@ -15,9 +15,9 @@ const Header = () => {
                             <Search/>
                             <nav>
                                 <ul className="hidden md:flex">
-                                    <li className="float-left"><Link to="/ayuda">Ayuda</Link></li>
+                                    <li className="float-left"><Link to="/faq">FAQ</Link></li>
                                     <li className="float-left"><Link to="/">Log In / Sign Up</Link></li>
-                                    <li className="float-left"><Link to="/contact" className='descarga_la_app'>Descarga la app</Link></li>
+                                    <li className="float-left"><Link to="/contact" className='descarga_la_app'>Download the app</Link></li>
                                 </ul>
                             </nav>
                         </div>

@@ -2,43 +2,43 @@ import React from 'react';
 import '../styles/Page.css';
 import {Accordion, AccordionBody, AccordionHeader, AccordionItem} from "react-headless-accordion";
 
-const Ayuda = () => {
+const Faq = () => {
     return (
         <div className='page-main'>
-            <h1 className='page-title p-4'>Preguntas</h1>
+            <h1 className='page-title p-4'>Questions</h1>
             <Accordion className='faq-content'>
             <AccordionItem>
                 <AccordionHeader className="w-full flex justify-between items-center text-gray-600 border-b p-4">
-                    <h3 className={`accordion-title`}>¿Qué es groop?</h3>
+                    <h3 className={`accordion-title`}>What is group?</h3>
                 </AccordionHeader>
 
                 <AccordionBody>
                     <div className="p-5 font-light">
-                    Groop es una plataforma de comercio electrónico en donde puedes encontrar tus productos favoritos de salud, belleza y cuidado personal a precios increíbles. Es muy sencillo realizar tu compra, solamente tienes que elegir tu punto de entrega sin costo y tu método de pago, en el que puedes escoger pago contra entrega.
+                    Groop is an e-commerce platform where you can find your favorite health, beauty and personal care products at incredible prices. It is very easy to make your purchase, you only have to choose your free delivery point and your payment method, in which you can choose payment on delivery.
                     </div>
                 </AccordionBody>
             </AccordionItem>
 
             <AccordionItem>
                 <AccordionHeader className="w-full flex justify-between items-center text-gray-600 border-b p-4">
-                    <h3 className={`accordion-title`}>¿Cómo puedo realizar un pedido?</h3>
+                    <h3 className={`accordion-title`}>How can I place an order?</h3>
                 </AccordionHeader>
 
                 <AccordionBody>
                     <div className="p-5 font-light">
-                    Selecciona el producto que quieres comprar, después selecciona tu punto de entrega más conveniente y finalmente debes elegir tu método de pago. Al procesar tu pedido, te contactaremos por Whatsapp confirmando tu orden.
+                    Select the product you want to buy, then select your most convenient delivery point and finally you must choose your payment method. When processing your order, we will contact you by Whatsapp confirming your order.
                     </div>
                 </AccordionBody>
             </AccordionItem>
 
             <AccordionItem>
                 <AccordionHeader className="w-full flex justify-between items-center text-gray-600 border-b p-4">
-                    <h3 className={`accordion-title`}>¿Qué son los puntos de entrega Groop?</h3>
+                    <h3 className={`accordion-title`}>What are Groop delivery points?</h3>
                 </AccordionHeader>
 
                 <AccordionBody>
                     <div className="p-5 font-light">
-                        Los puntos de entrega Groop son lugares ubicados estratégicamente alrededor de la Ciudad de México para que los usuarios puedan recoger sus pedidos sin costo de envío. Al hacer tu compra, selecciona el más conveniente para ti y recoge ahí tu pedido. Tenemos también la opción de envío a domicilio con costo adicional.
+                    Groop delivery points are places strategically located around Mexico City so that users can pick up their orders at no shipping cost. When making your purchase, select the most convenient for you and pick up your order there. We also have the option of home delivery at an additional cost.
                     </div>
                 </AccordionBody>
             </AccordionItem>
@@ -47,4 +47,4 @@ const Ayuda = () => {
     )
 }
 
-export default Ayuda
+export default Faq

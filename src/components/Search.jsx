@@ -11,7 +11,7 @@ const Search = () => {
                 <input
                     type="text"
                     id="header-search"
-                    placeholder="Buscar..."
+                    placeholder="Search..."
                     name="search" 
                 />
                 <button type="submit" className='action'><FontAwesomeIcon icon={faSearch} /></button>
