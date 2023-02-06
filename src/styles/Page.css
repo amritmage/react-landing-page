@@ -1,0 +1,13 @@
+.layout-1220 .page-main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.page-main {
+    max-width: 100%;
+    padding: 10px 20px;
+}
+.page-main > .page-title {
+    color: #01484C;
+    font-size: 20px;
+    margin: 0 0 15px;
+}

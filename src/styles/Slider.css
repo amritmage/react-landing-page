@@ -1,0 +1,108 @@
+.porto-ibanner, .porto-ibanner > img {
+    display: block;
+    position: relative;
+}
+.owl-carousel.owl-loaded {
+    display: block;
+}
+.home-banner-slider .owl-carousel .owl-dots {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+	top: 24px;
+	text-align: center;
+}
+.owl-carousel .owl-dots .owl-dot.active span, .owl-carousel .owl-dots .owl-dot:hover span {
+    background: #869791;
+}
+.owl-carousel .owl-nav {
+    top: 50%;
+    position: absolute;
+    margin-top: 0;
+    width: 100%;
+    flex: none;
+}
+.owl-carousel.nav-style-4 .owl-nav [class*="owl-"] {
+    width: 30px;
+    background: none!important;
+    color: #333;
+    font-size: 24px;
+}
+.owl-carousel .owl-nav .owl-prev {
+    left: 15px;
+	position: absolute;
+}
+.owl-carousel .owl-nav .owl-next {
+    right: 15px;
+	position: absolute;
+}
+.owl-carousel .owl-nav span {
+	font-size: 2em;
+}
+.owl-carousel .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 4px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s;
+    border-radius: 30px;
+}
+.porto-ibanner-layer {
+    left: 8%;
+    top: 40%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 40%;
+}
+.porto-ibanner-layer h2.vc_custom_heading {
+    font-size: 6em;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    line-height: 144px;
+    color: #FFFFFF;
+    text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+.porto-ibanner-layer h4.vc_custom_heading {
+    font-size: 2em;
+    font-weight: 900;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+.porto-ibanner-layer h3.vc_custom_heading {
+    font-size: 4em;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+    color: #FFFFFF;
+    text-shadow: 0px 7.76904px 15.5381px rgba(0, 0, 0, 0.25);
+}
+.porto-ibanner-layer h5.vc_custom_heading {
+    font-size: 1.6em;
+    font-weight: 300;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 37px;
+    color: #FFFFFF;
+}
+.porto-ibanner-layer .green {
+    background: #00E2A9;
+}
+.porto-ibanner-layer .btn-container a {
+    padding: 7px 21px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 20.0647px;
+    color: #ffffff !important;
+}
+.porto-ibanner-layer .btn-container {
+    border-radius: 44.3352px;
+    width: 128px;
+}
