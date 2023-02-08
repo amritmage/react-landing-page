@@ -31,7 +31,7 @@ const HomeSlider = () => {
               <div class="container">
                 <div class="porto-ibanner-container">
                   <div class="porto-ibanner-layer">
-                    <h2 class="vc_custom_heading mb-2 align-left">15% OFF</h2>
+                    <h2 class="vc_custom_heading mb-2 align-left">20% OFF</h2>
                     <h4 class="vc_custom_heading ls-120 mb-4 custom-font1 align-left">Suero de reparación nocturna</h4>
                     <h5 class="vc_custom_heading ls-120 mb-4 custom-font1 align-left">Conoce nuestras mejores ofertas.</h5>
                     <div class="btn-container mb-0 ls-120 text-center green"><a href="/" class="btn btn-modern btn-xl btn-dark w-100">Ver más</a></div>

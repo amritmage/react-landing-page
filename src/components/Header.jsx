@@ -11,7 +11,7 @@ const Header = () => {
                 <div className="md:border-b py-2">
                     <div className="container mx-auto">
                         <div className="flex justify-between gap-2">
-                            <Link to="/" className='logo'><img className="w-32 ml-2" src={logo} alt="Logo" /></Link>
+                            <Link to="/" className='logo'><img className="ml-2" src={logo} alt="Logo" /></Link>
                             <Search/>
                             <nav>
                                 <ul className="hidden md:flex">
