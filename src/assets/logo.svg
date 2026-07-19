@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 48" role="img" aria-label="Urban Worn">
+  <text x="0" y="33" font-family="Poppins, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="4" fill="currentColor">URBAN</text>
+  <g transform="translate(138 8)">
+    <path d="M12 22c0-6 4-10 8-14 1.5 4 4 7 8 9-5 1-9 4-11 9-2-4-4-4-5-4z" fill="#00E2A9"/>
+    <path d="M20 28c0-5 3-9 7-12 1 3 3 6 6 8-4 1-7 3-9 8-1-3-3-4-4-4z" fill="#00E2A9" opacity="0.85"/>
+    <rect x="10" y="30" width="22" height="2.5" rx="1.25" fill="#00E2A9"/>
+  </g>
+  <text x="188" y="33" font-family="Poppins, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="4" fill="currentColor">WORN</text>
+</svg>

@@ -1,0 +1,85 @@
+.contact-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #01484c;
+}
+
+.contact-page .page-title {
+  margin-bottom: 0.5rem;
+}
+
+.contact-lead {
+  margin: 0 0 2rem;
+  color: #5f7374;
+  line-height: 1.55;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid #cecece;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  color: #01484c;
+  background: #f3f7f6;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: 2px solid #00e2a9;
+  outline-offset: 1px;
+  background: #fff;
+}
+
+.contact-field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-error {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+.contact-submit {
+  justify-self: start;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  background: #01484c;
+  color: #00e2a9;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-1px);
+}
+
+.contact-success {
+  padding: 1.25rem 1.4rem;
+  border-left: 3px solid #00e2a9;
+  background: #f3f7f6;
+  line-height: 1.5;
+}

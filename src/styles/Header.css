@@ -1,65 +1,370 @@
 .header-main {
-    border-bottom: 1px solid #CECECE;
+  border-bottom: 1px solid #cecece;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
 }
-.logo{
-    padding: 0.3rem 0;
+
+.header-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
 }
+
+.logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  color: #01484c;
+}
+
+.logo img {
+  display: block;
+  width: 9.5rem;
+  height: auto;
+}
+
 .search-area {
-    position: relative;
-    width: 45%;
-    min-width: 45%;
-    border: 1px solid rgba(129,129,129,0.4);
-    font-size: 13px;
-    border-color: inherit;
-    background-color: #eee;
-    border-radius: 25px;
-    padding-left: 0 !important;
+  position: relative;
+  flex: 1 1 auto;
+  max-width: 34rem;
+  min-width: 10rem;
+  border: 1px solid rgba(129, 129, 129, 0.4);
+  background-color: #eee;
+  border-radius: 25px;
 }
-.search-area input {
-    left: 0;
-    border-radius: 0;
-    font-family: inherit;
-    border: none;
-    position: relative;
-    margin: 0;
-    color: inherit;
-    background: none;
-    padding-left: 20px;
-    height: 45px;
-    font-size: 1rem;
-}
-.search-area .action::before {
-    font-size: inherit;
-    color: inherit;
-    content: '\e884';
-    font-family: 'porto-icons';
-    font-weight: 600;
-    -webkit-font-smoothing: antialiased;
-    display: block;
-}
-.search-area .action{
-    width: 40px;
-    line-height: 1px;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    font-size: inherit;
-    border: none;
-    border-radius: 0;
-    display: inline-block;
-    font-size: 1rem;
-    background: inherit;
-}
+
 .search-area .minisearch {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
-.search-area .minisearch input {
-    flex: 1;
+
+.search-area input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  margin: 0;
+  color: inherit;
+  background: none;
+  padding: 0 0 0 1.25rem;
+  height: 42px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
 }
-nav ul a.descarga_la_app {
-    color: #00E2A9 !important;
-    background: #01484C;
-    border-radius: 25px;
-    padding: 10px 40px;
+
+.search-area .action {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #01484c;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e5eceb;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(1, 72, 76, 0.12);
+  overflow: hidden;
+  z-index: 50;
+}
+
+.search-suggestions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem 0;
+}
+
+.search-suggestions a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.85rem;
+  text-decoration: none;
+  color: #01484c;
+}
+
+.search-suggestions a:hover {
+  background: #f3f7f6;
+}
+
+.search-suggestions img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  background: #e8efee;
+}
+
+.search-suggestions span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.search-suggestions strong {
+  font-size: 0.92rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-suggestions em {
+  font-style: normal;
+  font-size: 0.82rem;
+  color: #5f7374;
+}
+
+.search-suggestions__empty {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  color: #5f7374;
+  font-size: 0.9rem;
+}
+
+.search-suggestions__all {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e5eceb;
+  background: #f3f7f6;
+  color: #01484c;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.cart-link {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #01484c;
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  min-width: 1.15rem;
+  height: 1.15rem;
+  padding: 0 0.3rem;
+  border-radius: 999px;
+  background: #00e2a9;
+  color: #01484c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.15rem;
+  text-align: center;
+}
+
+.utility-nav {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.utility-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.utility-nav ul a {
+  display: inline-block;
+  padding: 0.45rem 0.75rem;
+  color: #01484c;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 0.92rem;
+}
+
+.utility-nav ul a.descarga_la_app {
+  color: #00e2a9 !important;
+  background: #01484c;
+  border-radius: 25px;
+  padding: 0.55rem 1.1rem;
+  font-weight: 600;
+}
+
+.utility-user {
+  padding: 0.45rem 0.75rem;
+  color: #5f7374;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.utility-logout {
+  border: none;
+  background: transparent;
+  color: #01484c;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #01484c;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.45rem;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #01484c;
+  border-radius: 2px;
+}
+
+.category-nav {
+  border-top: 1px solid #ececec;
+  background: #f8fbfa;
+}
+
+.category-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.35rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.category-nav__link {
+  flex: 0 0 auto;
+  padding: 0.55rem 0.85rem;
+  color: #01484c;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+}
+
+.category-nav__link:hover,
+.category-nav__link.is-active {
+  color: #01484c;
+  border-bottom-color: #00e2a9;
+}
+
+@media (max-width: 1100px) {
+  .utility-nav ul a {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .utility-nav ul a.descarga_la_app {
+    padding: 0.5rem 0.85rem;
+  }
+
+  .logo img {
+    width: 8.25rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-top {
+    flex-wrap: wrap;
+    row-gap: 0.65rem;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .cart-link {
+    margin-left: auto;
+  }
+
+  .search-area {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: none;
+    width: 100%;
+  }
+
+  .utility-nav {
+    order: 4;
+    flex: 1 1 100%;
+    margin-left: 0;
+    display: none;
+    width: 100%;
+    border-top: 1px solid #ececec;
+    padding-top: 0.35rem;
+  }
+
+  .utility-nav.is-open {
+    display: block;
+  }
+
+  .utility-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .utility-nav ul a {
+    display: block;
+    padding: 0.7rem 0.35rem;
+  }
+
+  .utility-nav ul a.descarga_la_app {
+    text-align: center;
+    margin-top: 0.2rem;
+  }
+
+  .utility-user,
+  .utility-logout {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.7rem 0.35rem;
+  }
+
+  .category-nav__inner {
+    padding: 0.25rem 0.75rem;
+  }
 }

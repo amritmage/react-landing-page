@@ -1,73 +1,97 @@
-# Screenshot
-[![Screenshot.png](https://i.postimg.cc/50DqrnDZ/Screenshot.png)](https://postimg.cc/WF6kF6Nn)
+# Urban Worn — React Landing Page Demo
 
-# Getting Started with Create React App
+A Create React App beauty & personal-care storefront for practicing everyday React patterns: components, Context, controlled forms, list rendering, URL search params, and client-side routing.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+No backend is required. Cart, auth session, and last order are stored in the browser with `localStorage`.
 
-## Available Scripts
+![Homepage screenshot](src/assets/Screenshot.png)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+| Area | What it demonstrates |
+| --- | --- |
+| **Hero slider** | Custom React carousel (autoplay, fade, dots/arrows, pause on hover) |
+| **Category menu** | Sticky header category links + home pills, synced via `?category=` |
+| **Search** | Live suggestions, submit filters products via `?q=` |
+| **Product catalog** | Multi-category products, real images, add-to-cart |
+| **Cart** | Shared Context state, qty steppers, remove, summary |
+| **Checkout** | Contact + pickup/delivery + pay on delivery / demo card |
+| **Order confirmation** | Persisted last order + success UI |
+| **Login / Sign up** | Auth forms only — local session, **no database insert** |
+| **Download app** | Demo store buttons (no real store redirect) |
+| **Contact / FAQ / Newsletter** | Controlled forms and headless accordion |
+| **Header / Footer** | Working routes, cart badge, mobile menu, hash scroll |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Routes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Path | Page |
+| --- | --- |
+| `/` | Home (slider, categories, products) |
+| `/cart` | Shopping bag |
+| `/checkout` | Checkout form |
+| `/order-confirmation` | Order confirmation |
+| `/login` | Log in (form only) |
+| `/signup` | Sign up (form only, no DB) |
+| `/download` | Download the app |
+| `/faq` | FAQ |
+| `/contact` | Contact |
 
-### `npm test`
+Category and search URLs on home:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `/?category=skincare#products-title`
+- `/?q=serum#products-title`
 
-### `npm run build`
+## Auth (demo only)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Forms validate in the browser and set a local session (`urban-worn-auth-user`).
+- Name and email are kept in `localStorage`. **Passwords are not stored.**
+- There is **no API and no database insert**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Cart and checkout
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Cart: `CartProvider` → `localStorage` key `urban-worn-cart`
+- Last order: `urban-worn-last-order` after a successful checkout
+- Checkout is a demo flow — no real payments
+- Pickup points and delivery fee: `src/data/catalog.js`
 
-### `npm run eject`
+## Getting started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build   # production build → build/
+npm test        # Jest + React Testing Library
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech stack
 
-## Learn More
+- React 18
+- React Router DOM v6
+- Tailwind CSS (utility classes where used)
+- Font Awesome
+- react-headless-accordion
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+src/
+  components/     # Pages & UI (Home, Cart, Checkout, Auth, Header, Footer, …)
+  context/        # AuthProvider, CartProvider
+  data/catalog.js # Categories, products, pickup points, benefits
+  utils/          # cart helpers, search helpers
+  styles/         # Header, slider, home, cart, auth, contact, footer
+  assets/         # logo.svg, hero banners, products/
+  App.jsx         # Providers + router + ScrollToHash
+```
 
-### Code Splitting
+## Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Brand colors: teal `#01484C`, mint `#00E2A9`
+- Logo: `src/assets/logo.svg`
+- Product photos: `src/assets/products/` (Unsplash)
+- Unused legacy packages may still appear in `package.json` (e.g. Owl Carousel); the hero uses a custom React slider

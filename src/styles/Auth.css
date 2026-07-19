@@ -1,0 +1,132 @@
+.auth-page,
+.download-page {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #01484c;
+}
+
+.auth-page .page-title,
+.download-page .page-title {
+  margin-bottom: 0.5rem;
+}
+
+.auth-lead,
+.download-lead {
+  margin: 0 0 1.75rem;
+  color: #5f7374;
+  line-height: 1.55;
+}
+
+.auth-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.auth-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.auth-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.auth-field input {
+  width: 100%;
+  border: 1px solid #cecece;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  color: #01484c;
+  background: #f3f7f6;
+}
+
+.auth-field input:focus {
+  outline: 2px solid #00e2a9;
+  outline-offset: 1px;
+  background: #fff;
+}
+
+.auth-error {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+.auth-submit,
+.download-cta {
+  justify-self: start;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem;
+  background: #01484c;
+  color: #00e2a9;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.auth-submit:hover,
+.download-cta:hover {
+  transform: translateY(-1px);
+}
+
+.auth-switch {
+  margin: 1.25rem 0 0;
+  color: #5f7374;
+  font-size: 0.95rem;
+}
+
+.auth-switch a {
+  color: #01484c;
+  font-weight: 600;
+}
+
+.auth-note {
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  background: #f3f7f6;
+  border-left: 3px solid #00e2a9;
+  color: #5f7374;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.auth-success {
+  padding: 1.25rem 1.4rem;
+  border-left: 3px solid #00e2a9;
+  background: #f3f7f6;
+  line-height: 1.5;
+}
+
+.auth-success p {
+  margin: 0 0 1rem;
+}
+
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.download-cta.is-secondary {
+  background: transparent;
+  color: #01484c;
+  border: 1px solid #01484c;
+}
+
+.download-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #5f7374;
+  line-height: 1.7;
+}
