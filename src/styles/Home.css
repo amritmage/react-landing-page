@@ -135,6 +135,16 @@
   animation: rise-in 0.45s ease both;
 }
 
+.product-tile__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.product-tile__link:hover .product-meta h3 {
+  color: #02656b;
+}
+
 .product-tile:nth-child(2) {
   animation-delay: 0.05s;
 }

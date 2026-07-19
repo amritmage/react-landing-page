@@ -74,9 +74,8 @@ const Search = ({ onNavigate }) => {
               {suggestions.map((product) => (
                 <li key={product.id}>
                   <Link
-                    to={`/?q=${encodeURIComponent(product.name)}#products-title`}
+                    to={`/product/${product.id}`}
                     onClick={() => {
-                      setQuery(product.name);
                       setOpen(false);
                       onNavigate?.();
                     }}

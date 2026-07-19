@@ -10,6 +10,8 @@ import OrderConfirmation from './components/OrderConfirmation';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import DownloadApp from './components/DownloadApp';
+import ProductDetail from './components/ProductDetail';
+import NotFound from './components/NotFound';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToHash from './components/ScrollToHash';
@@ -23,6 +25,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
@@ -31,6 +34,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/download" element={<DownloadApp />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </Router>

@@ -73,6 +73,16 @@
   font-weight: 700;
 }
 
+.cart-line__body h3 a,
+.cart-line__media {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cart-line__body h3 a:hover {
+  color: #02656b;
+}
+
 .cart-line__body p {
   margin: 0.3rem 0 0.75rem;
   color: #5f7374;

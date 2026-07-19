@@ -34,11 +34,13 @@ const Cart = () => {
         <div className="cart-lines">
           {lines.map((line) => (
             <article key={line.id} className="cart-line">
-              <div className="cart-line__media">
+              <Link to={`/product/${line.id}`} className="cart-line__media">
                 <img src={line.image} alt={line.name} />
-              </div>
+              </Link>
               <div className="cart-line__body">
-                <h3>{line.name}</h3>
+                <h3>
+                  <Link to={`/product/${line.id}`}>{line.name}</Link>
+                </h3>
                 <p>{formatPrice(line.price)} each</p>
                 <div className="cart-line__actions">
                   <div className="qty-control" aria-label={`Quantity for ${line.name}`}>

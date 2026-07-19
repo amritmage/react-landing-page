@@ -1,6 +1,6 @@
-# Urban Worn — React Landing Page Demo
+# Urban Worn — Ecommerce Demo
 
-A Create React App beauty & personal-care storefront for practicing everyday React patterns: components, Context, controlled forms, list rendering, URL search params, and client-side routing.
+A Create React App beauty & personal-care ecommerce demo for practicing everyday React patterns: components, Context, controlled forms, list rendering, URL search params, and client-side routing.
 
 No backend is required. Cart, auth session, and last order are stored in the browser with `localStorage`.
 
@@ -12,13 +12,15 @@ No backend is required. Cart, auth session, and last order are stored in the bro
 | --- | --- |
 | **Hero slider** | Custom React carousel (autoplay, fade, dots/arrows, pause on hover) |
 | **Category menu** | Sticky header category links + home pills, synced via `?category=` |
-| **Search** | Live suggestions, submit filters products via `?q=` |
+| **Search** | Live suggestions (open product pages), submit filters via `?q=` |
 | **Product catalog** | Multi-category products, real images, add-to-cart |
+| **Product detail** | `/product/:id` with qty, add to bag, related products |
 | **Cart** | Shared Context state, qty steppers, remove, summary |
 | **Checkout** | Contact + pickup/delivery + pay on delivery / demo card |
 | **Order confirmation** | Persisted last order + success UI |
 | **Login / Sign up** | Auth forms only — local session, **no database insert** |
 | **Download app** | Demo store buttons (no real store redirect) |
+| **404** | Catch-all route for unknown URLs |
 | **Contact / FAQ / Newsletter** | Controlled forms and headless accordion |
 | **Header / Footer** | Working routes, cart badge, mobile menu, hash scroll |
 
@@ -27,6 +29,7 @@ No backend is required. Cart, auth session, and last order are stored in the bro
 | Path | Page |
 | --- | --- |
 | `/` | Home (slider, categories, products) |
+| `/product/:id` | Product detail |
 | `/cart` | Shopping bag |
 | `/checkout` | Checkout form |
 | `/order-confirmation` | Order confirmation |
@@ -35,6 +38,7 @@ No backend is required. Cart, auth session, and last order are stored in the bro
 | `/download` | Download the app |
 | `/faq` | FAQ |
 | `/contact` | Contact |
+| `*` | 404 Not found |
 
 Category and search URLs on home:
 
@@ -80,11 +84,11 @@ npm test        # Jest + React Testing Library
 
 ```text
 src/
-  components/     # Pages & UI (Home, Cart, Checkout, Auth, Header, Footer, …)
+  components/     # Pages & UI (Home, ProductDetail, Cart, Auth, Header, …)
   context/        # AuthProvider, CartProvider
   data/catalog.js # Categories, products, pickup points, benefits
   utils/          # cart helpers, search helpers
-  styles/         # Header, slider, home, cart, auth, contact, footer
+  styles/         # Header, slider, home, product, cart, auth, contact, footer
   assets/         # logo.svg, hero banners, products/
   App.jsx         # Providers + router + ScrollToHash
 ```
@@ -94,4 +98,3 @@ src/
 - Brand colors: teal `#01484C`, mint `#00E2A9`
 - Logo: `src/assets/logo.svg`
 - Product photos: `src/assets/products/` (Unsplash)
-- Unused legacy packages may still appear in `package.json` (e.g. Owl Carousel); the hero uses a custom React slider

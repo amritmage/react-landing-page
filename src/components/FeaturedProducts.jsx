@@ -59,14 +59,19 @@ const FeaturedProducts = ({ products, searchQuery = '', activeCategory = 'all' }
             const inCart = items.some((item) => item.id === product.id);
             return (
               <article key={product.id} className="product-tile">
-                <div className="product-media">
-                  <img src={product.image} alt={product.name} loading="lazy" />
-                  <span>{categoryLabel(product.categories[0])}</span>
-                </div>
-                <div className="product-meta">
-                  <h3>{product.name}</h3>
-                  <p>{product.blurb}</p>
-                </div>
+                <Link
+                  to={`/product/${product.id}`}
+                  className="product-tile__link"
+                >
+                  <div className="product-media">
+                    <img src={product.image} alt={product.name} loading="lazy" />
+                    <span>{categoryLabel(product.categories[0])}</span>
+                  </div>
+                  <div className="product-meta">
+                    <h3>{product.name}</h3>
+                    <p>{product.blurb}</p>
+                  </div>
+                </Link>
                 <div className="product-row">
                   <span className="product-price">{formatPrice(product.price)}</span>
                   <button
